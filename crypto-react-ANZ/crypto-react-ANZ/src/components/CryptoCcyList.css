@@ -1,0 +1,52 @@
+.cryptoRow {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cryptoName {
+    color: darkcyan;
+}
+
+.cryptoPrice {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.cryptoChange {
+    padding: 5px;
+    margin-left: 30px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    width: 60px;
+    text-align: right;
+}
+.customSelect{
+    width: 300px;
+    position: relative;
+    font-family: Arial;
+    background-color: gainsboro;
+    font-size: 20px;
+}
+.curSelectStr{
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    float: right;
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.headingFormat{
+    background-color: gainsboro;
+}
