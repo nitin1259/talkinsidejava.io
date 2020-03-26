@@ -17,7 +17,7 @@ public class SellingProducts {
 		
 		int m=2; // number of ids to take out
 		
-		distinctIds(input, m);
+		System.out.println("distinct ids left: "+ distinctIds(input, m));
 
 	}
 	
@@ -37,13 +37,13 @@ public class SellingProducts {
 		Map<Integer, Integer> sortMap = sortByValue(countmap);
 		
 		
-		printMap(sortMap);
+		// printMap(sortMap);
 		
 		int count = 0;
 		for (Map.Entry<Integer, Integer> set: sortMap.entrySet()) {
 			if(set.getValue()<= m && count+set.getValue() <= m)
 			{
-				System.out.println(set.getValue() +":="+count);
+				// System.out.println(set.getValue() +":="+count);
 				count += set.getValue();
 				countmap.remove(set.getKey());
 			}
@@ -52,7 +52,7 @@ public class SellingProducts {
 		}
 		
 		
-		System.out.println(countmap.size());
+		// System.out.println(countmap.size());
 		return countmap.size();
 
 	}
