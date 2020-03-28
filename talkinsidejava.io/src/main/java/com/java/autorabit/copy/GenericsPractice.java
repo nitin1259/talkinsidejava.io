@@ -69,6 +69,7 @@ class GenericBoundTypeFindMax {
 		
 		return max;
 	}
+	
 }
 
 class GenericInputTest{
@@ -77,6 +78,11 @@ class GenericInputTest{
 		return  x.doubleValue() + y.doubleValue();
 		
 	}
+}
+
+class GenericUpperBoundTest{
+	
+	
 }
 
 
