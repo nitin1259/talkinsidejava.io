@@ -18,6 +18,17 @@ public class StreamFlatMapExample {
 
 	/**
 	 * @param args
+	 * 
+	 * 	Stream<String[]>		-> flatMap ->	Stream<String>
+		Stream<Set<String>>	-> flatMap ->	Stream<String>
+		Stream<List<String>>	-> flatMap ->	Stream<String>
+		Stream<List<Object>>	-> flatMap ->	Stream<Object>
+		
+		How flatMap() works :
+
+		{ {1,2}, {3,4}, {5,6} } -> flatMap -> {1,2,3,4,5,6}
+		
+		{ {'a','b'}, {'c','d'}, {'e','f'} } -> flatMap -> {'a','b','c','d','e','f'}
 	 */
 	public static void main(String[] args) {
 		
