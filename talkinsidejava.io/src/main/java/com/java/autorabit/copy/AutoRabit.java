@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -20,7 +21,7 @@ public class AutoRabit {
 		List<String> strList = Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h");
 		
 		
-		ThreadPoolExecutor executer = (ThreadPoolExecutor)Executors.newFixedThreadPool(5);
+		ExecutorService executer = Executors.newFixedThreadPool(5);
 		
 		
 		for (String str : strList) {
@@ -28,7 +29,7 @@ public class AutoRabit {
 			
 			executer.execute(t);
 		}
-		executer.shutdown();
+		((ThreadPoolExecutor) executer).shutdown();
 	}
 }
 
