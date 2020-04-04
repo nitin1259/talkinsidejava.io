@@ -23,13 +23,15 @@ public class MoveZeros {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int [] input = {0,1,0,0,0,0,4,7,0,2,3,12};
+		// int [] input = {0,1,0,0,0,0,4,7,0,2,3,12};
+		int [] input = {0,1,0,3,12};
 		
-		moveZeroes(input);
+		// moveZeroesWithExtraSpace(input);
+		noveZeros(input);
 	}
 
 	// solution with extra array space
-	private static void moveZeroes(int[] nums) {
+	private static void moveZeroesWithExtraSpace(int[] nums) {
 		
 		int [] res = new int[nums.length];
 		int index = 0;
@@ -46,4 +48,23 @@ public class MoveZeros {
 			System.out.println(i);
 		}
     }
+	
+	// Runtine: 0 ms, faster than 100.00% of Java online submissions for Move Zeroes.
+	private static void noveZeros(int [] nums) {
+		
+		int runningIndex = 0;
+		
+		for(int i = 0; i< nums.length;i++) {
+			
+			if(nums[i]!= 0) nums[runningIndex++]=nums[i];
+			
+		}
+		while(runningIndex<nums.length) {
+			nums[runningIndex++]=0;
+		}
+		
+		for(int i: nums) {
+			System.out.println(i);
+		}
+	}
 }
