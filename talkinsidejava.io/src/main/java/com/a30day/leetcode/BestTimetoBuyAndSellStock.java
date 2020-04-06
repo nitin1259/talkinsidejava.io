@@ -40,7 +40,7 @@ public class BestTimetoBuyAndSellStock {
 	public static void main(String[] args) {
 		
 		// int [] input = {7,1,5,3,6,4};
-		int [] input = {1,2,6,8,1};
+		int [] input = {1,2,3,4,5};
 		// int [] input = {7,6,4,3,1};
 		
 		System.out.println(maxProfitWhileBuyAndSell(input));
